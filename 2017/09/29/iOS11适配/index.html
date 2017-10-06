@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*表示在所有平台下  3, iphoneX屏幕分辨">
+<meta name="description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123456789101112131415161718作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*">
 <meta name="keywords" content="适配(屏幕、系统)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS11适配">
 <meta property="og:url" content="http://yoursite.com/2017/09/29/iOS11适配/index.html">
 <meta property="og:site_name" content="Mr.han&#39;s Blog">
-<meta property="og:description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*表示在所有平台下  3, iphoneX屏幕分辨">
+<meta property="og:description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123456789101112131415161718作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-29T10:55:48.000Z">
+<meta property="og:updated_time" content="2017-09-30T04:25:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS11适配">
-<meta name="twitter:description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*表示在所有平台下  3, iphoneX屏幕分辨">
+<meta name="twitter:description" content="1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）   2，@available(iOS 9.0,*)的作用 123456789101112131415161718作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。参数1：iOS 9.0表示只有9.0以上的系统才为真参数2：*">
 
 
 
@@ -394,13 +394,19 @@
 <hr>
 <blockquote>
 <h3 id="2，-available-iOS-9-0-的作用"><a href="#2，-available-iOS-9-0-的作用" class="headerlink" title="2，@available(iOS 9.0,*)的作用"></a>2，<a href="http://www.jianshu.com/p/99efa0236f3c" target="_blank" rel="external">@available(iOS 9.0,*)的作用</a></h3></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">作用：可以判断不同平台和系统。oc中通常在if(while,guard等)判断语句中,判断系统版本。</div><div class="line">参数1：iOS 9.0表示只有9.0以上的系统才为真</div><div class="line">参数2：*表示在所有平台下</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">作用：可以判断不同平台和系统。oc中通常在<span class="keyword">if</span>(<span class="keyword">while</span>,guard等)判断语句中,判断系统版本。</div><div class="line">参数<span class="number">1</span>：iOS <span class="number">9.0</span>表示只有<span class="number">9.0</span>以上的系统才为真</div><div class="line">参数<span class="number">2</span>：*表示在所有平台下</div><div class="line"></div><div class="line">    <span class="comment">//如果是iOS11以上的系统</span></div><div class="line">    <span class="keyword">if</span> (@available(iOS <span class="number">11.0</span>, *)) &#123;</div><div class="line">        </div><div class="line">        _tableV.contentInsetAdjustmentBehavior = <span class="built_in">UIScrollViewContentInsetAdjustmentNever</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">UI_IS_IPHONE11</span>) &#123;</div><div class="line">            <span class="comment">//iPhone X导航高度为88</span></div><div class="line">            _tableV.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">64</span>+<span class="number">24</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//iphoneX,导航高度增加了24，高88</span></div><div class="line">        &#125;<span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            <span class="comment">//除iPhone X之外的设备（导航高度为64）</span></div><div class="line">            _tableV.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">64</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//iphoneX,导航高度增加了24，高88</span></div><div class="line">        &#125;</div><div class="line">        _tableV.scrollIndicatorInsets = _tableV.contentInset;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <h3 id="3-iphoneX屏幕分辨率和实际尺寸"><a href="#3-iphoneX屏幕分辨率和实际尺寸" class="headerlink" title="3, iphoneX屏幕分辨率和实际尺寸"></a>3, iphoneX屏幕分辨率和实际尺寸</h3></blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iphoneX的实际尺寸为：375 x 821</div><div class="line">屏幕分辨率：1125 x 2436</div></pre></td></tr></table></figure>
 <blockquote>
 <h3 id="4-iphoneX的导航高度"><a href="#4-iphoneX的导航高度" class="headerlink" title="4,iphoneX的导航高度"></a>4,iphoneX的导航高度</h3></blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1，iphoneX的导航高度为88，比原来高了24</div><div class="line">2，其他机型的导航高度为64</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。"><a href="#5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。" class="headerlink" title="5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。"></a>5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。</h3></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">解决方案1：</div><div class="line">一般我们在viewWillAppear和viewDidAppear中发送通知移除系统的tabbar,</div><div class="line">在iPhone X和iPhone 8手机上iOS11系统，出现了问题，然后在发送通知的时候延迟了0.5s可以解决。</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="在xcode9下，使用WKWebView崩溃。"><a href="#在xcode9下，使用WKWebView崩溃。" class="headerlink" title="在xcode9下，使用WKWebView崩溃。"></a>在xcode9下，使用WKWebView崩溃。</h3></blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">解决方法:</div><div class="line"><span class="comment">//实现下面代理方法，并return。</span></div><div class="line">- (<span class="keyword">void</span>)webView:(<span class="built_in">WKWebView</span> *)webView</div><div class="line">didFailNavigation:(<span class="built_in">WKNavigation</span> *)navigation</div><div class="line">      withError:(<span class="built_in">NSError</span> *)error &#123;</div><div class="line">    <span class="comment">// ……</span></div><div class="line">    <span class="comment">// Xcode 升级到9后 WKWebViewJavascriptBridge.m 中有个 bug</span></div><div class="line">    <span class="comment">// 需要在这个方法得最后加上 return，否则崩溃。</span></div><div class="line">    <span class="comment">// 不升级 Xcode 的话，没问题。</span></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -469,6 +475,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/06/百度云限速破解/" rel="prev" title="百度云限速破解">
+                百度云限速破解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -548,7 +558,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -570,7 +580,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -633,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125-2436）"><span class="nav-number">1.</span> <span class="nav-text">1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，-available-iOS-9-0-的作用"><span class="nav-number">2.</span> <span class="nav-text">2，@available(iOS 9.0,*)的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-iphoneX屏幕分辨率和实际尺寸"><span class="nav-number">3.</span> <span class="nav-text">3, iphoneX屏幕分辨率和实际尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-iphoneX的导航高度"><span class="nav-number">4.</span> <span class="nav-text">4,iphoneX的导航高度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125-2436）"><span class="nav-number">1.</span> <span class="nav-text">1，运行项目在iphoneX，发现没有充满屏幕，上下会有黑色区域，这是因为没有设置对应的启动图（尺寸：1125*2436）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，-available-iOS-9-0-的作用"><span class="nav-number">2.</span> <span class="nav-text">2，@available(iOS 9.0,*)的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-iphoneX屏幕分辨率和实际尺寸"><span class="nav-number">3.</span> <span class="nav-text">3, iphoneX屏幕分辨率和实际尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-iphoneX的导航高度"><span class="nav-number">4.</span> <span class="nav-text">4,iphoneX的导航高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。"><span class="nav-number">5.</span> <span class="nav-text">5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在xcode9下，使用WKWebView崩溃。"><span class="nav-number">6.</span> <span class="nav-text">在xcode9下，使用WKWebView崩溃。</span></a></li></ol></div>
             
 
           </div>
