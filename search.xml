@@ -3,6 +3,74 @@
   
     
     <entry>
+      <title><![CDATA[错误: /Users/.../Main.storyboard: Safe Area Layout Guide before iOS 9.0]]></title>
+      <url>/2017/11/01/iOS11%E9%94%99%E8%AF%AF/</url>
+      <content type="html"><![CDATA[<p><table><tr><td bgcolor="black"><font color="white" size="5" face="Weibei SC">(main.storyboard和LaunchScreen.storyboard都要去掉。)<br></font></td></tr></table><br><img src="http://upload-images.jianshu.io/upload_images/1358091-f0afecc5f6476a00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> oc语言 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 报错集合 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[升级xcode编辑崩溃]]></title>
+      <url>/2017/10/23/%E5%8D%87%E7%BA%A7xcode%E7%BC%96%E8%BE%91%E5%B4%A9%E6%BA%83/</url>
+      <content type="html"><![CDATA[<blockquote>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3></blockquote>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//崩溃原因：之前安装过插件。</span></div><div class="line"></div><div class="line"><span class="comment">//1,终端输入：</span></div><div class="line"><span class="comment">//版本要填写自己当前的版本</span></div><div class="line">defaults delete com.apple.dt.<span class="type">Xcode</span> <span class="type">DVTPlugInManagerNonApplePlugIns</span>-<span class="type">Xcode</span>-<span class="number">9.0</span>.<span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">//2,</span></div><div class="line">cmd+q关闭xcode,然后打开点skip bundle即可。</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> oc语言 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 报错集合 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[iOS导航]]></title>
+      <url>/2017/10/12/iOS%E5%AF%BC%E8%88%AA/</url>
+      <content type="html"><![CDATA[<meta http-equiv="refresh" content="0;url=http://www.jianshu.com/p/488ed792ae65"> 
+
+
+
+]]></content>
+      
+        <categories>
+            
+            <category> oc语言 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 导航-oc </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo写博客时的格式]]></title>
       <url>/2017/10/10/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -11,6 +79,9 @@
 <blockquote>
 <h3 id="2-排版细节"><a href="#2-排版细节" class="headerlink" title="2,排版细节"></a>2,排版细节</h3></blockquote>
 <p><img src="http://upload-images.jianshu.io/upload_images/1358091-eba19322b64b0eb4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<h3 id="3-倒计时自动跳转界面"><a href="#3-倒计时自动跳转界面" class="headerlink" title="3,倒计时自动跳转界面"></a>3,倒计时自动跳转界面</h3></blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">    http-equiv:固定为刷新</div><div class="line">    content：第一个参数为倒计时时间</div><div class="line">    第二个参数为要跳转的网页</div><div class="line">*/</div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"0;url=http://www.jianshu.com/p/488ed792ae65"</span> /&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -270,8 +341,11 @@
 <h3 id="5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。"><a href="#5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。" class="headerlink" title="5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。"></a>5，UITabbar复用问题，就是点击两次tabbar才可以正常选中。</h3></blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">解决方案1：</div><div class="line">一般我们在viewWillAppear和viewDidAppear中发送通知移除系统的tabbar,</div><div class="line">在iPhone X和iPhone 8手机上iOS11系统，出现了问题，然后在发送通知的时候延迟了0.5s可以解决。</div></pre></td></tr></table></figure>
 <blockquote>
-<h3 id="在xcode9下，使用WKWebView崩溃。"><a href="#在xcode9下，使用WKWebView崩溃。" class="headerlink" title="在xcode9下，使用WKWebView崩溃。"></a>在xcode9下，使用WKWebView崩溃。</h3></blockquote>
+<h3 id="6，在xcode9下，使用WKWebView崩溃。"><a href="#6，在xcode9下，使用WKWebView崩溃。" class="headerlink" title="6，在xcode9下，使用WKWebView崩溃。"></a>6，在xcode9下，使用WKWebView崩溃。</h3></blockquote>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">解决方法:</div><div class="line"><span class="comment">//实现下面代理方法，并return。</span></div><div class="line">- (<span class="keyword">void</span>)webView:(<span class="built_in">WKWebView</span> *)webView</div><div class="line">didFailNavigation:(<span class="built_in">WKNavigation</span> *)navigation</div><div class="line">      withError:(<span class="built_in">NSError</span> *)error &#123;</div><div class="line">    <span class="comment">// ……</span></div><div class="line">    <span class="comment">// Xcode 升级到9后 WKWebViewJavascriptBridge.m 中有个 bug</span></div><div class="line">    <span class="comment">// 需要在这个方法得最后加上 return，否则崩溃。</span></div><div class="line">    <span class="comment">// 不升级 Xcode 的话，没问题。</span></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="7，新建项目报错，提示安全区域不支持iOS9-0以下。-main-storyboard和LaunchScreen-storyboard都要去掉。"><a href="#7，新建项目报错，提示安全区域不支持iOS9-0以下。-main-storyboard和LaunchScreen-storyboard都要去掉。" class="headerlink" title="7，新建项目报错，提示安全区域不支持iOS9.0以下。(main.storyboard和LaunchScreen.storyboard都要去掉。)"></a>7，新建项目报错，提示安全区域不支持iOS9.0以下。(main.storyboard和LaunchScreen.storyboard都要去掉。)</h3></blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1358091-f0afecc5f6476a00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 ]]></content>
       
         <categories>
